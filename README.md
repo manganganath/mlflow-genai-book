@@ -1,4 +1,4 @@
-## # Mastering MLflow for Large Language Models on Databricks
+# Mastering MLflow for Large Language Models on Databricks
 
 ---
 
