@@ -1,151 +1,204 @@
-# Mastering MLflow for Large Language Models on Databricks
+# Mastering MLflow for LLMs on Databricks
 
 ---
 
-**Preface**  
-- What to Expect from This Book  
-- The Evolving AI & LLM Landscape  
-- How to Use This Book & the Public GitHub Repository
+# Preface
+
+- **Why This Book Was Written**
+- **What to Expect from This Book**
+- **The Evolving AI & LLM Landscape**
+- **How to Use This Book & the Public GitHub Repository**
 
 ---
 
-**Chapter 1: Introduction to MLflow for LLMs on Databricks**  
-1.1 Overview of MLflow  
-&nbsp;&nbsp;&nbsp;&nbsp;- Components and Capabilities  
-&nbsp;&nbsp;&nbsp;&nbsp;- Open Source vs. Databricks Implementations  
+# Chapter 1: Introduction to MLflow for LLMs on Databricks
 
-1.2 Why MLflow for LLMs?  
-&nbsp;&nbsp;&nbsp;&nbsp;- Challenges in LLM Integration  
-&nbsp;&nbsp;&nbsp;&nbsp;- How MLflow Alleviates Complexity  
+## 1.1 Overview of MLflow
+- Why Use MLflow 
+- Components and Capabilities
+- Open Source vs. Databricks Implementations
 
-1.3 Introducing the Super Use-Case: HR Policy Chatbot  
-&nbsp;&nbsp;&nbsp;&nbsp;- Use-Case Overview  
-&nbsp;&nbsp;&nbsp;&nbsp;- Key Requirements and Objectives  
+## 1.2 Why MLflow for LLMs?
+- Challenges in LLM Integration
+- How MLflow Alleviates Complexity
 
----
+## 1.3 Introducing the Super Use-Case: HR Policy Chatbot
+- Use-Case Overview
+- Key Requirements and Objectives
+- Breakdown of the Use Case to Different Chapters
 
-**Chapter 2: Core Components of MLflow for LLM Applications**  
-2.1 MLflow Tracking  
-&nbsp;&nbsp;&nbsp;&nbsp;- Logging Parameters, Metrics, and Artifacts  
-&nbsp;&nbsp;&nbsp;&nbsp;- Managing Predictions and Trace Data  
-
-2.2 MLflow Projects  
-&nbsp;&nbsp;&nbsp;&nbsp;- Structuring and Running ML Projects (with LLM focus)  
-
-2.3 MLflow Models and the Model Registry  
-&nbsp;&nbsp;&nbsp;&nbsp;- Packaging LLMs as PyFuncs  
-&nbsp;&nbsp;&nbsp;&nbsp;- Deployment Considerations in the HR Policy Chatbot Context  
-&nbsp;&nbsp;&nbsp;&nbsp;- Managing Model Lifecycles and Versioning
+## 1.4 Conclusion
 
 ---
 
-**Chapter 3: Prompt Engineering with MLflow**  
-3.1 The Art and Science of Prompt Engineering  
-&nbsp;&nbsp;&nbsp;&nbsp;- Importance for LLM Performance  
-&nbsp;&nbsp;&nbsp;&nbsp;- Strategies and Techniques
+# Chapter 2: Core Components of MLflow for LLM Applications
 
-3.2 MLflow Prompt Engineering UI  
-&nbsp;&nbsp;&nbsp;&nbsp;- Features and Capabilities  
-&nbsp;&nbsp;&nbsp;&nbsp;- Hands-On Example: Iterating HR Policy Prompts  
+## 2.1 MLflow Tracking
+- Logging Parameters, Metrics, and Artifacts
+- Managing Experiments
 
-3.3 Iterative Development & Optimization  
-&nbsp;&nbsp;&nbsp;&nbsp;- Best Practices for Continuous Improvement  
-&nbsp;&nbsp;&nbsp;&nbsp;- Tracking Iterations with MLflow
+## 2.2 MLflow Projects
+- Environment Dependencies  
+- Structuring and Running ML Projects 
 
----
+## 2.3 MLflow Models
+- Logging Models with Different Flavors
+- Natively Supported Model Flavors
+- MLflow Model Artifacts 
 
-**Chapter 4: Evaluating LLMs within MLflow**  
-4.1 Understanding LLM Evaluation Challenges  
-&nbsp;&nbsp;&nbsp;&nbsp;- Limitations of Traditional Metrics  
-&nbsp;&nbsp;&nbsp;&nbsp;- Use-Case Specific Considerations for Chatbots  
+## 2.4 Model Registry
+- Model Registry in UC 
+- Model Versioning
+- Managing Model Lifecycles 
 
-4.2 Leveraging the `mlflow.evaluate()` API  
-&nbsp;&nbsp;&nbsp;&nbsp;- Standard Metrics for LLMs  
-&nbsp;&nbsp;&nbsp;&nbsp;- Custom Scoring Plugins
-
-4.3 Comparative Analysis: Foundational Models, Providers, and Prompts  
-&nbsp;&nbsp;&nbsp;&nbsp;- Evaluating Retriever Components  
-&nbsp;&nbsp;&nbsp;&nbsp;- Evaluation for Retrieval Augmented Generation (RAG)
+## 2.5 Conclusion 
 
 ---
 
-**Chapter 5: Building a Simple Chain for the HR Policy Chatbot**  
-5.1 Architecting a Simple Chain for LLM Applications  
-&nbsp;&nbsp;&nbsp;&nbsp;- Overview of the Chain-of-Thought Approach  
-&nbsp;&nbsp;&nbsp;&nbsp;- Integrating Tracking and Artifacts
+# Chapter 3: Prompt Engineering with MLflow
 
-5.2 Implementing MLflow Tracking and Tracing  
-&nbsp;&nbsp;&nbsp;&nbsp;- Logging Interactions and Configurations  
-&nbsp;&nbsp;&nbsp;&nbsp;- Debugging and Performance Insights
+## 3.1 The Art and Science of Prompt Engineering
+- Importance for LLM Performance
+- Strategies and Techniques of Prompting (Most common ones)
 
-5.3 Evaluating the Retriever and RAG Components  
-&nbsp;&nbsp;&nbsp;&nbsp;- Practical Considerations in the Chatbot Use-Case
+## 3.2 MLflow Prompt Engineering UI
+- Features and Capabilities
+- Hands-On Example: Iterating HR Policy Prompts
 
----
+## 3.3 Iterative Development & Optimization
+- Best Practices for Continuous Improvement
+- Tracking Iterations with MLflow
 
-**Chapter 6: Advanced ChatModels, Agents, and Custom PyFuncs**  
-6.1 Developing Custom ChatModels with MLflow  
-&nbsp;&nbsp;&nbsp;&nbsp;- Wrapping Local LLM Providers  
-&nbsp;&nbsp;&nbsp;&nbsp;- Advanced Features: Tracing and Configuration Management
-
-6.2 Implementing Tool-Calling Models and Agents  
-&nbsp;&nbsp;&nbsp;&nbsp;- Building Agents with Integrated Tools  
-&nbsp;&nbsp;&nbsp;&nbsp;- Case Study: Extending the HR Chatbot with External Data Lookups  
-&nbsp;&nbsp;&nbsp;&nbsp;- Evaluating Agent Performance with Custom Metrics
-
-6.3 Packaging and Deploying Advanced LLMs as Custom PyFuncs  
-&nbsp;&nbsp;&nbsp;&nbsp;- Code Organization and Best Practices  
-&nbsp;&nbsp;&nbsp;&nbsp;- Integration into the HR Policy Chatbot  
-&nbsp;&nbsp;&nbsp;&nbsp;- Managing Dependencies and Model Upgrades
+## 3.4 Conclusion & Best Practices 
 
 ---
 
-**Chapter 7: Unified LLM Integrations with MLflow AI Gateway**  
-7.1 Overview of the MLflow AI Gateway  
-&nbsp;&nbsp;&nbsp;&nbsp;- Simplifying Provider Interactions  
-&nbsp;&nbsp;&nbsp;&nbsp;- Key Benefits and Use Cases
+# Chapter 4: Building and Tracking a Simple Chain
 
-7.2 MLflow AI Gateway vs. MosaicAI AI Gateway  
-&nbsp;&nbsp;&nbsp;&nbsp;- Feature Comparison and Trade-offs  
-&nbsp;&nbsp;&nbsp;&nbsp;- When and Why to Choose One Over the Other
+## 4.1 Architecting a Simple Chain for LLM Applications
+- Overview of the Chaining Approach
+- Integrating with Databricks Foundation Model API
+- Integrating Vector Indexes
 
-7.3 Provider Swapping and Secure Credential Management  
-&nbsp;&nbsp;&nbsp;&nbsp;- Achieving a Consistent API Experience  
-&nbsp;&nbsp;&nbsp;&nbsp;- Best Practices for Seamless Integration
+## 4.2 Implementing MLflow Tracking 
+- Logging Interactions and Configurations
+- Model Signatures, Input and Output Formats
+- Logging Model as Code
+- Logging Chain as Code 
+- Registering Model in Unity Catalog
 
----
-
-**Chapter 8: Deep Dive into MLflow Tracing for LLMs**  
-8.1 Understanding Tracing in MLflow  
-&nbsp;&nbsp;&nbsp;&nbsp;- Concepts and Importance for LLMs  
-&nbsp;&nbsp;&nbsp;&nbsp;- Overview of Trace Data and Schemas
-
-8.2 Automated Tracing with GenAI Libraries  
-&nbsp;&nbsp;&nbsp;&nbsp;- Integrating with LangChain, OpenAI, LlamaIndex, and AutoGen
-
-8.3 Manual and Low-Level Tracing APIs  
-&nbsp;&nbsp;&nbsp;&nbsp;- High-Level Fluent APIs: Decorators and Context Managers  
-&nbsp;&nbsp;&nbsp;&nbsp;- Low-Level Client APIs for Fine-Grained Control
-
-8.4 Best Practices for Trace Data Management  
-&nbsp;&nbsp;&nbsp;&nbsp;- Debugging, Performance Monitoring, and Insights
+## 4.3 Conclusion & Best Practices
 
 ---
 
-**Chapter 9: Conclusion and Future Directions**  
-9.1 Recap of the HR Policy Chatbot Journey  
-&nbsp;&nbsp;&nbsp;&nbsp;- Key Learnings and Outcomes
+# Chapter 5: Deep Dive into MLflow Tracing for LLMs
 
-9.2 Emerging Trends in LLMs and MLflow  
-&nbsp;&nbsp;&nbsp;&nbsp;- Future Opportunities and Evolving Use Cases
+## 5.1 Understanding Tracing in MLflow
+- Concepts and Importance for LLMs
+- Overview of Trace Data and Schemas
+- Debugging and Performance Insights
 
-9.3 Contributing and Engaging with the Open-Source Community  
-&nbsp;&nbsp;&nbsp;&nbsp;- Overview of the Public GitHub Repository  
-&nbsp;&nbsp;&nbsp;&nbsp;- Next Steps and Final Thoughts
+## 5.2 Automated Tracing with GenAI Libraries
+- Integrating with LangChain, OpenAI, LlamaIndex, and AutoGen
+
+## 5.3 Manual and Low-Level Tracing APIs
+- High-Level Fluent APIs: Decorators and Context Managers
+- Low-Level Client APIs for Fine-Grained Control
+
+## 5.4 Best Practices for Trace Data Management
+- Debugging, Performance Monitoring, and Insights
+
+## 5.5 Conclusion & Best Practices
 
 ---
 
-**Appendices**  
-- Appendix A: GitHub Repository Structure and How to Use It  
-- Appendix B: Glossary of Key Terms  
-- Appendix C: Additional Resources and References
+# Chapter 6: Evaluating LLMs within MLflow
+
+## 6.1 Understanding LLM Evaluation Challenges
+- Limitations of Traditional Metrics
+- Components: What can be evaluated (chart)
+
+## 6.2 Offline / Online Evaluation 
+- Human Evaluation
+- Offline Evaluation
+- Online Evaluation
+
+## 6.3 Evaluating the Retriever
+- Why Evaluate Retrieval?
+- Validation Dataset for Retrieval Evaluation
+- Retriever Metrics 
+
+## 6.4 Evaluating the LLM chain
+- LLM as a Judge 
+- LLM Chains 
+- Interpreting Evaluation Results
+- RAG Metrics (RAG != Chain)
+- Standard Metrics for LLMs
+- Custom Scoring Metrics
+
+## 6.5 Conclusion & Best Practices
+
+---
+
+# Chapter 7: Advanced ChatModels, Agents, and Custom PyFuncs
+
+## 7.1 Developing Custom ChatModels with MLflow
+- Why and when to use ChatModels? 
+- Wrapping Local LLM Providers
+- Advanced Features: Tracing, Dependencies and Configuration Management
+
+## 7.2 Implementing Tool-Calling Models and Agents
+- Building Agents with Integrated Tools
+- Case Study: Extending the HR Chatbot with External Data Lookups
+- Tools example: SQL Functions, API Calls, Vector Retrieval…  
+- Advanced Features: Tracing, Evaluations  
+
+## 7.3 Packaging and Deploying Advanced LLMs as Custom PyFuncs
+- Deploying to Model Serving
+- Managing Dependencies and Model Versioning
+
+## 7.4 Conclusion & Best Practices
+
+---
+
+# Chapter 8: Operationalizing LLMs with MLflow
+
+## 8.1 MLflow roles in LLMOps 
+- Architecture Flow of MLflow in LLM
+- MLflow components in LLMOps  
+
+## 8.2 Overview of the MLflow AI Gateway
+- MLflow AI Gateway vs. MosaicAI AI Gateway
+- When and Why to Choose One Over the Other
+
+## 8.3 MLFlow Model Registry for Model Ops
+- Version control
+- Stage / Alias
+
+## 8.4 Monitoring with MLFlow Metrics
+- Tracing Statistics 
+- Model Evaluation Metrics 
+
+## 8.5 Conclusion & Best Practices
+
+---
+
+# Chapter 9: Conclusion and Future Directions
+
+## 9.1 Recap of the HR Policy Chatbot Journey
+- Key Learnings and Outcomes
+
+## 9.2 Emerging Trends in LLMs and MLflow
+- Future Opportunities and Evolving Use Cases
+
+## 9.3 Contributing and Engaging with the Open-Source Community
+- Overview of the Public GitHub Repository
+- Next Steps and Final Thoughts
+
+---
+
+# Appendices
+
+- **Appendix A:** GitHub Repository Structure and How to Use It
+- **Appendix B:** Glossary of Key Terms
+- **Appendix C:** Additional Resources and References
