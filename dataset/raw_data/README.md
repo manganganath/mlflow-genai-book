@@ -1,12 +1,8 @@
 # Dataset: Indicators of Access to and Use of Financial Services Across Countries
 
-This repository contains the dataset **Indicators of Access to and Use of Financial Services Across Countries** imported from the World Bank data catalog. The data provides various indicators on how financial services are accessed and used across different countries.
+This folder contains the dataset **Indicators of Access to and Use of Financial Services Across Countries** imported from the World Bank data catalog. The dataset includes various metrics that indicate how different populations access and use financial services globally. It can be used for analysis, visualization, and research in financial inclusion and related areas.
 
-## Dataset Overview
-
-- **Title:** Indicators of Access to and Use of Financial Services Across Countries
-- **Source:** [World Bank Data Catalog](https://datacatalog.worldbank.org/search/dataset/0042005/Indicators-of-Access-to-and-Use-of-Financial-Services-Across-Countries)
-- **Description:** The dataset includes various metrics that indicate how different populations access and use financial services globally. It can be used for analysis, visualization, and research in financial inclusion and related areas.
+**Source:** [World Bank Data Catalog](https://datacatalog.worldbank.org/search/dataset/0042005/Indicators-of-Access-to-and-Use-of-Financial-Services-Across-Countries)
 
 ## License
 
