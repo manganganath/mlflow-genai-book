@@ -1,0 +1,25 @@
+dataset:
+  documents:
+    main_pdf:
+      catalog: global_fs
+      schema: worldbank
+      volume: raw_data
+      filename: reachingoutassesstoandusebankingservicesandacrosscountries_0_main.pdf
+      full_path: /Volumes/global_fs/worldbank/raw_data/reachingoutassesstoandusebankingservicesandacrosscountries_0_main.pdf
+
+  tables:
+    chapter_chunk_table:
+      catalog: global_fs
+      schema: worldbank
+      name: chapter_chunk_data
+      full_path: global_fs.worldbank.chapter_chunk_data
+  
+  vector_indexes:
+    chapter_index:
+      catalog: global_fs
+      schema: worldbank
+      name: chapter_index
+      full_name: global_fs.worldbank.chapter_index
+      endpoint_name: one-env-shared-endpoint-13
+    
+
