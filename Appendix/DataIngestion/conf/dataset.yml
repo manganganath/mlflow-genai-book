@@ -13,6 +13,11 @@ dataset:
       schema: worldbank
       name: chapter_chunk_data
       full_path: global_fs.worldbank.chapter_chunk_data
+    evaluation_table:
+      catalog: global_fs
+      schema: worldbank
+      name: evalation_dataset
+      full_path: global_fs.worldbank.evalation_dataset
   
   vector_indexes:
     chapter_index:
