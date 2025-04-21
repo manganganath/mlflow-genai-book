@@ -1,0 +1,4 @@
+mlflow==2.21.0
+langchain
+langchain-core
+databricks-langchain

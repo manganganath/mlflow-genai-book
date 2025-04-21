@@ -17,7 +17,7 @@ dataset:
       catalog: global_fs
       schema: worldbank
       name: evalation_dataset
-      full_path: global_fs.worldbank.evalation_dataset
+      full_path: global_fs.worldbank.evaluation_dataset
   
   vector_indexes:
     chapter_index:

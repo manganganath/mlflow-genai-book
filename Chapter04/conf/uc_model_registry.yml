@@ -1,0 +1,5 @@
+rag_chain_model:
+  catalog: global_fs
+  schema: worldbank
+  model_name: rag_chain_model
+  full_name: global_fs.worldbank.rag_chain_model
