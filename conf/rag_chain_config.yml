@@ -20,7 +20,13 @@ llm_config:
   llm_parameters: 
     max_tokens: 1000
     temperature: 0
-  llm_prompt_template: "You are a trusted AI assistant that helps answer questions based only on the provided information. If you do not know the answer to a question, you truthfully say you do not know. Here is the history of the current conversation you are having with your user: {chat_history}. And here is some context which may or may not help you answer the following question: {context}.  Answer directly, do not repeat the question. Based on this context, answer this question: {question}"
+  llm_prompt_template: |
+    You are a trusted AI assistant that helps answer questions based only on the provided information. Here is some context which may or may not help you answer the following question: {context}.
+    
+    Answer directly, do not repeat the question. Based on this context, answer this question: {question}.
+    
+    If you don't know the answer, just say that you don't know.
+
   llm_prompt_template_variables: 
     - context
     - chat_history
@@ -30,3 +36,4 @@ input_example:
   messages:
   - content: What are the factors associated with greater banking sector outreach, and how do they impact firms' financing constraints?
     role: user
+output_example: This is an example output

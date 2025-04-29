@@ -1,4 +1,0 @@
-mlflow==2.21.0
-pypdf==5.3.1
-databricks-agents==0.17.2
-databricks-vectorsearch

@@ -23,3 +23,7 @@ def format_context(docs):
         for d in docs
     ]
     return "".join(chunk_contents)
+
+
+def format_docs(docs):
+    return "\n\n".join(doc.page_content for doc in docs)
