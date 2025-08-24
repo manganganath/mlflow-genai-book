@@ -25,7 +25,7 @@ from helpers.format_helpers import (
 mlflow.langchain.autolog()
 
 ## Get the conf from the local conf file
-model_config = mlflow.models.ModelConfig(development_config="conf/rag_chain_config.yml")
+model_config = mlflow.models.ModelConfig(development_config="../conf/rag_chain_config.yml")
 databricks_resources = model_config.get("databricks_resources")
 retriever_config = model_config.get("retriever_config")
 llm_config = model_config.get("llm_config")

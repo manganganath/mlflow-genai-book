@@ -1,20 +1,21 @@
 databricks_resources:
-  model_name: "databricks-claude-3-7-sonnet"
-  vs_index_endpoint_name: "one-env-shared-endpoint-13"
+  model_name: "databricks-gpt-oss-120b"
+  vs_index_endpoint_name: "vs_endpoint"
   
 retriever_config:
-  index_name: global_fs.worldbank.chapter_index
+  index_name: workspace.unity_air.faq_index
   columns: 
-    - chapter
-    - chapter_text
-    - footnotes
+    - id
+    - question
+    - answer
+    - search_text
   parameters: 
     k: 1
   retriever_schema:
-    primary_key: chapter
-    text_column: chapter_text
-    doc_uri: chapter
-    name: databricks_documentation_vs_index
+    primary_key: id
+    text_column: search_text
+    doc_uri: id
+    name: unity_air_faq_vs_index
 
 llm_config:
   llm_parameters: 
@@ -34,6 +35,6 @@ llm_config:
 
 input_example:
   messages:
-  - content: What are the factors associated with greater banking sector outreach, and how do they impact firms' financing constraints?
+  - content: Can I book for someone else using my Unity Air account?
     role: user
 output_example: This is an example output
