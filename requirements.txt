@@ -1,7 +1,7 @@
-mlflow==2.21.0
+mlflow==3.1.0
 pypdf==5.3.1
 langchain==0.3.24
 langchain-core==0.3.56
 databricks-langchain==0.4.2
-databricks-agents==0.17.2
+databricks-agents
 python_mermaid==0.1.3
