@@ -1,0 +1,50 @@
+dataset:
+  faq_dataset:
+      catalog: workspace
+      schema: unity_ar
+      volume: dataset
+      full_path: /Volumes/workspace/unity_air/dataset/unity_air_faq.snappy.parquet
+      local_path: dataset/unity_air_faq.snappy.parquet
+  booking_records_dataset:
+      catalog: workspace
+      schema: unity_ar
+      volume: dataset
+      full_path: /Volumes/workspace/unity_air/dataset/unity_air_booking_records.snappy.parquet
+      local_path: dataset/unity_air_booking_records.snappy.parquet
+  qa_dataset:
+      catalog: workspace
+      schema: unity_ar
+      volume: dataset
+      full_path: /Volumes/workspace/unity_air/dataset/unity_air_sample_qa.snappy.parquet
+      local_path: dataset/unity_air_faq.snappy.parquet
+
+tables:
+  faq_dataset:
+    catalog: workspace
+    schema: unity_ar
+    name: faq_dataset
+    full_path: workspace.unity_air.faq_dataset
+  booking_records_dataset:
+    catalog: workspace
+    schema: unity_ar
+    name: booking_records
+    full_path: workspace.unity_air.booking_records_dataset
+  qa_dataset:
+    catalog: workspace
+    schema: unity_ar
+    name: qa_dataset
+    full_path: workspace.unity_air.qa_dataset
+
+vector_indexes:
+  faq_dataset:
+    catalog: workspace
+    schema: unity_ar
+    name: faq_dataset_index
+    full_name: workspace.unity_air.faq_index
+    endpoint_name: vs_endpoint
+    primary_key: id
+    embedding_source_column: search_text
+    embedding_model_endpoint_name: databricks-gte-large-en
+    
+    
+
