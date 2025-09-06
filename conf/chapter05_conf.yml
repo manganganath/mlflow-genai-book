@@ -2,20 +2,35 @@ databricks_resources:
   model_name: "databricks-gpt-oss-120b"
   vs_index_endpoint_name: "vs_endpoint"
   
-retriever_config:
-  index_name: workspace.unity_air.faq_index
-  columns: 
-    - id
-    - question
-    - answer
-    - search_text
-  parameters: 
-    k: 1
-  retriever_schema:
-    primary_key: id
-    text_column: search_text
-    doc_uri: id
-    name: unity_air_faq_vs_index
+retriever_configs:
+  retriever_1:
+    endpoint_name: vs_endpoint
+    index_name: workspace.unity_air.faq_index
+    columns: 
+      - id
+      - question
+      - answer
+      - search_text
+    k: 3
+    retriever_schema:
+      primary_key: id
+      text_column: search_text
+      doc_uri: id
+      name: unity_air_faq_vs_index
+  retriever_2:
+    endpoint_name: vs_endpoint
+    index_name: workspace.unity_air.faq_index
+    columns: 
+      - id
+      - question
+      - answer
+      - search_text
+    k: 2
+    retriever_schema:
+      primary_key: id
+      text_column: search_text
+      doc_uri: id
+      name: unity_air_faq_vs_index
 
 llm_config:
   llm_parameters: 
