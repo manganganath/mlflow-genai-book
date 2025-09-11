@@ -5,7 +5,7 @@ databricks_resources:
 retriever_configs:
   retriever_1:
     endpoint_name: vs_endpoint
-    index_name: workspace.unity_air.faq_index
+    index_name: workspace.unity_airways.faq_index
     columns: 
       - id
       - question
@@ -16,10 +16,10 @@ retriever_configs:
       primary_key: id
       text_column: search_text
       doc_uri: id
-      name: unity_air_faq_vs_index
+      name: unity_airways_faq_vs_index
   retriever_2:
     endpoint_name: vs_endpoint
-    index_name: workspace.unity_air.faq_index
+    index_name: workspace.unity_airways.faq_index
     columns: 
       - id
       - question
@@ -30,7 +30,7 @@ retriever_configs:
       primary_key: id
       text_column: search_text
       doc_uri: id
-      name: unity_air_faq_vs_index
+      name: unity_airways_faq_vs_index
 
 llm_config:
   llm_parameters: 

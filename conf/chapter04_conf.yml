@@ -3,7 +3,7 @@ databricks_resources:
   vs_index_endpoint_name: "vs_endpoint"
   
 retriever_config:
-  index_name: workspace.unity_air.faq_index
+  index_name: workspace.unity_airways.faq_index
   columns: 
     - id
     - question
@@ -15,7 +15,7 @@ retriever_config:
     primary_key: id
     text_column: search_text
     doc_uri: id
-    name: unity_air_faq_vs_index
+    name: unity_airways_faq_vs_index
 
 llm_config:
   llm_parameters: 
@@ -35,6 +35,6 @@ llm_config:
 
 input_example:
   messages:
-  - content: Can I book for someone else using my Unity Air account?
+  - content: How do i book flights with Unity Airways?
     role: user
 output_example: This is an example output
