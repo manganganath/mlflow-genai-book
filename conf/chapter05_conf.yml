@@ -5,7 +5,7 @@ databricks_resources:
 retriever_configs:
   retriever_1:
     endpoint_name: vs_endpoint
-    index_name: workspace.unity_air.faq_index
+    index_name: workspace.unity_airways.faq_index
     columns: 
       - id
       - question
@@ -16,10 +16,10 @@ retriever_configs:
       primary_key: id
       text_column: search_text
       doc_uri: id
-      name: unity_air_faq_vs_index
+      name: unity_airways_faq_vs_index
   retriever_2:
     endpoint_name: vs_endpoint
-    index_name: workspace.unity_air.faq_index
+    index_name: workspace.unity_airways.faq_index
     columns: 
       - id
       - question
@@ -30,26 +30,4 @@ retriever_configs:
       primary_key: id
       text_column: search_text
       doc_uri: id
-      name: unity_air_faq_vs_index
-
-llm_config:
-  llm_parameters: 
-    max_tokens: 1000
-    temperature: 0
-  llm_prompt_template: |
-    You are a trusted AI assistant that helps answer questions based only on the provided information. Here is some context which may or may not help you answer the following question: {context}.
-    
-    Answer directly, do not repeat the question. Based on this context, answer this question: {question}.
-    
-    If you don't know the answer, just say that you don't know.
-
-  llm_prompt_template_variables: 
-    - context
-    - chat_history
-    - question
-
-input_example:
-  messages:
-  - content: Can I book for someone else using my Unity Air account?
-    role: user
-output_example: This is an example output
+      name: unity_airways_faq_vs_index
