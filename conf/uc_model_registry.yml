@@ -1,5 +1,5 @@
 rag_chain_model:
-  catalog: global_fs
-  schema: worldbank
+  catalog: workspace
+  schema: unity_airways
   model_name: rag_chain_model
-  full_name: global_fs.worldbank.rag_chain_model
+  full_name: workspace.unity_airways.rag_chain_model
