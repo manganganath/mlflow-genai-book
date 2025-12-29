@@ -1,4 +1,4 @@
-mlflow==3.2.0
+mlflow==3.5.1
 pypdf==5.3.1
 langchain==0.3.24
 langchain-core==0.3.56
@@ -8,3 +8,4 @@ databricks-agents==1.4.0
 langgraph==0.5.3
 backoff==2.2.1
 uv==0.8.17
+litellm==1.79.3
