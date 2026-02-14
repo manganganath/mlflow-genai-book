@@ -3,7 +3,7 @@ databricks_resources:
   vs_index_endpoint_name: "vs_endpoint"
   
 retriever_config:
-  index_name: workspace.unity_airways.faq_index
+  index_name: nuwan.unity_airways.faq_index
   columns: 
     - id
     - question
