@@ -1,5 +1,11 @@
-rag_chain_model:
-  catalog: nuwan
+tool_calling_agent:
+  catalog: workspace
   schema: unity_airways
-  model_name: rag_chain_model
-  full_name: nuwan.unity_airways.rag_chain_model
+  model_name: tool_calling_agent
+  full_name: workspace.unity_airways.tool_calling_agent
+
+tool_calling_agent_prompt:
+  catalog: workspace
+  schema: unity_airways
+  prompt: tool_calling_agent_system_prompt
+  full_name: workspace.unity_airways.tool_calling_agent_system_prompt
