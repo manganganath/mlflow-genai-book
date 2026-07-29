@@ -1,1 +1,2 @@
-mlflow_experiment_path: /Users/changshi.lim@databricks.com/chapter09_experiment
+# Change to your own path if you prefer, e.g. /Users/<your-username>/chapter09_experiment
+mlflow_experiment_path: /Shared/mlflow-genai-book/chapter09_experiment
