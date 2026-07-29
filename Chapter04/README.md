@@ -1,24 +1,22 @@
-# 📘 Chapter 4: Building and Tracking a Simple Chain
+# Chapter 4: Building and Versioning a Tool-Calling Agent
 
-LLM applications often involve chaining multiple models and tasks together. 
-In this chapter, we build a simple LLM chain and learn how to track its components using MLflow.
+This chapter builds a tool-calling agent for the Unity Airways assistant and versions
+it as a reproducible application artifact, bringing configuration, retrieval, and
+prompting together as a governed unit you can compare and promote.
 
-## 📑 Table of Contents
+## In this chapter
+- What Is a Tool-Calling Agent?
+- LangChain and Databricks Integration
+- Building a LangChain Agent and Versioning in MLflow
+- Packaging and Logging the Agent and Artifacts
 
-### 4.1 Architecting a Simple Chain for LLM Applications
-- Overview of the Chaining Approach
-- Integrating with Databricks Foundation Model API
-- Integrating Vector Indexes
+## In this folder
+- `chapter04_walkthrough.ipynb` — builds the LangChain tool-calling agent
+  and logs and versions it with MLflow.
+- `tool_calling_agent.py` — the agent definition logged as a "model from code".
+- `requirements.txt` — pins the agent's deployment dependencies.
 
-### 4.2 Implementing MLflow Tracking 
-- Logging Interactions and Configurations
-- Model Signatures, Input and Output Formats
-- Logging Model as Code
-- Logging Chain as Code 
-- Registering Model in Unity Catalog
-
-### 4.3 Conclusion & Best Practices
-
----
-
-By the end of this chapter, you’ll be able to build and track LLM chains effectively using MLflow.
+## Before you start
+See the [repository README](../README.md) for prerequisites and setup. Run the
+[`Appendix/data_ingestion`](../Appendix/data_ingestion) notebooks first to build the
+Unity Airways FAQ vector search index used from Chapter 4 onward.

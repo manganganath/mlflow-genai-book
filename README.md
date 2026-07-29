@@ -1,204 +1,107 @@
-# Mastering MLflow for LLMs on Databricks
+# Practical MLflow for Generative AI on Databricks
+
+**Build High-Quality AI Agents from Prompt Design to Production**
+
+Companion code for the O'Reilly book *Practical MLflow for Generative AI on Databricks*
+by Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim (O'Reilly Media, 2026, ISBN 9798341652750).
+
+This repository contains the notebooks, agent code, configuration files, and datasets that accompany the book. It is designed to be worked through as a guided project: run the notebooks in sequence, then adapt the patterns to your own use case.
 
 ---
 
-# Preface
+## The running example: Unity Airways
 
-- **Why This Book Was Written**
-- **What to Expect from This Book**
-- **The Evolving AI & LLM Landscape**
-- **How to Use This Book & the Public GitHub Repository**
+Every chapter builds on a single scenario — a customer-service assistant for a fictional airline, **Unity Airways**. The assistant has to handle the mix most real GenAI applications face: unstructured policy documents, structured booking records, multi-intent user requests, and the need to behave safely under ambiguity. The example evolves chapter by chapter, from a baseline prompt to a fully deployed and monitored agent.
 
 ---
 
-# Chapter 1: Introduction to MLflow for LLMs on Databricks
+## Repository structure
 
-## 1.1 Overview of MLflow
-- Why Use MLflow 
-- Components and Capabilities
-- Open Source vs. Databricks Implementations
+| Path | Book chapter | Contents |
+|------|--------------|----------|
+| [`Chapter01/`](Chapter01) | Ch 1 — Introduction to MLflow for GenAI on Databricks | Overview (conceptual chapter) |
+| [`Chapter02/`](Chapter02) | Ch 2 — End-to-End GenAI Application Lifecycle with MLflow | Overview (conceptual chapter) |
+| [`Chapter03/`](Chapter03) | Ch 3 — Prompt Engineering with MLflow | Prompt Registry, evaluation, optimization |
+| [`Chapter04/`](Chapter04) | Ch 4 — Building and Versioning a Tool-Calling Agent | LangChain agent + `tool_calling_agent.py` |
+| [`Chapter05/`](Chapter05) | Ch 5 — MLflow Tracing for GenAI Application Observability | Automated & manual tracing |
+| [`Chapter06/`](Chapter06) | Ch 6 — Evaluating GenAI Applications with MLflow | Evaluation datasets, scorers, human feedback |
+| [`Chapter07/`](Chapter07) | Ch 7 — Advanced Agents and Tools | Tools, `ResponsesAgent`, MCP, `agent.py` |
+| [`Chapter08/`](Chapter08) | Ch 8 — Deploying a GenAI Application with MLflow | Model Serving, AI Gateway, guardrails, `agent.py` |
+| [`Chapter09/`](Chapter09) | Ch 9 — Production Monitoring with MLflow | Online scorers, dashboards, alerts |
+| [`Chapter10/`](Chapter10) | Ch 10 — Unifying GenAI Systems with MLflow | Agent Server, MCP, OpenTelemetry |
+| [`Appendix/data_ingestion/`](Appendix/data_ingestion) | Supports Ch 4 | Load datasets and build the FAQ vector search index |
+| [`conf/`](conf) | — | YAML configuration for chapters, datasets, and registries |
+| [`dataset/`](dataset) | — | Unity Airways sample data (Parquet) |
+| [`requirements.txt`](requirements.txt) | — | Unified Python dependencies for all chapters |
 
-## 1.2 Why MLflow for LLMs?
-- Challenges in LLM Integration
-- How MLflow Alleviates Complexity
-
-## 1.3 Introducing the Super Use-Case: HR Policy Chatbot
-- Use-Case Overview
-- Key Requirements and Objectives
-- Breakdown of the Use Case to Different Chapters
-
-## 1.4 Conclusion
-
----
-
-# Chapter 2: Core Components of MLflow for LLM Applications
-
-## 2.1 MLflow Tracking
-- Logging Parameters, Metrics, and Artifacts
-- Managing Experiments
-
-## 2.2 MLflow Projects
-- Environment Dependencies  
-- Structuring and Running ML Projects 
-
-## 2.3 MLflow Models
-- Logging Models with Different Flavors
-- Natively Supported Model Flavors
-- MLflow Model Artifacts 
-
-## 2.4 Model Registry
-- Model Registry in UC 
-- Model Versioning
-- Managing Model Lifecycles 
-
-## 2.5 Conclusion 
+> **Note:** Chapters 1 and 2 are conceptual and have no notebooks — see the book for the full discussion.
 
 ---
 
-# Chapter 3: Prompt Engineering with MLflow
+## Prerequisites
 
-## 3.1 The Art and Science of Prompt Engineering
-- Importance for LLM Performance
-- Strategies and Techniques of Prompting (Most common ones)
-
-## 3.2 MLflow Prompt Engineering UI
-- Features and Capabilities
-- Hands-On Example: Iterating HR Policy Prompts
-
-## 3.3 Iterative Development & Optimization
-- Best Practices for Continuous Improvement
-- Tracking Iterations with MLflow
-
-## 3.4 Conclusion & Best Practices 
+- Access to a **Databricks workspace**. If you don't have one, sign up for the free edition: <https://www.databricks.com/learn/free-edition>
+- **Serverless compute** attached to a notebook.
+- A **pay-per-token Foundation Model** served on the Databricks Foundation Model APIs (the examples use `databricks-gpt-oss-120b`).
+- A **Databricks Vector Search endpoint** (the config defaults to an endpoint named `vs_endpoint`).
+- Familiarity with Python and Databricks notebooks. You do not need to be an MLflow expert.
 
 ---
 
-# Chapter 4: Building and Tracking a Simple Chain
+## Getting started
 
-## 4.1 Architecting a Simple Chain for LLM Applications
-- Overview of the Chaining Approach
-- Integrating with Databricks Foundation Model API
-- Integrating Vector Indexes
-
-## 4.2 Implementing MLflow Tracking 
-- Logging Interactions and Configurations
-- Model Signatures, Input and Output Formats
-- Logging Model as Code
-- Logging Chain as Code 
-- Registering Model in Unity Catalog
-
-## 4.3 Conclusion & Best Practices
-
----
-
-# Chapter 5: Deep Dive into MLflow Tracing for LLMs
-
-## 5.1 Understanding Tracing in MLflow
-- Concepts and Importance for LLMs
-- Overview of Trace Data and Schemas
-- Debugging and Performance Insights
-
-## 5.2 Automated Tracing with GenAI Libraries
-- Integrating with LangChain, OpenAI, LlamaIndex, and AutoGen
-
-## 5.3 Manual and Low-Level Tracing APIs
-- High-Level Fluent APIs: Decorators and Context Managers
-- Low-Level Client APIs for Fine-Grained Control
-
-## 5.4 Best Practices for Trace Data Management
-- Debugging, Performance Monitoring, and Insights
-
-## 5.5 Conclusion & Best Practices
+1. **Clone the repository** into your Databricks workspace (via Repos) or locally:
+   ```bash
+   git clone https://github.com/manganganath/mlflow-genai-book.git
+   ```
+2. **Install dependencies.** Every notebook installs the unified dependency set in its first cell:
+   ```python
+   %pip install -r ../requirements.txt
+   dbutils.library.restartPython()
+   ```
+   (Chapters run from their own folder; the Appendix notebooks use `../../requirements.txt`.)
+3. **Prepare the data.** Run the notebooks in [`Appendix/data_ingestion/`](Appendix/data_ingestion) **first** to load the Unity Airways datasets and build the FAQ vector search index used from Chapter 4 onward.
+4. **Work through the chapters in order** (3 → 10). Each notebook opens with an *About this notebook* cell that maps it to the relevant book chapter and sections.
 
 ---
 
-# Chapter 6: Evaluating LLMs within MLflow
+## Configuration
 
-## 6.1 Understanding LLM Evaluation Challenges
-- Limitations of Traditional Metrics
-- Components: What can be evaluated (chart)
+Configuration is separated from code so you can change parameters without editing notebooks. The [`conf/`](conf) folder contains:
 
-## 6.2 Offline / Online Evaluation 
-- Human Evaluation
-- Offline Evaluation
-- Online Evaluation
+| File | Purpose |
+|------|---------|
+| `data.yml` | Catalog, schema, volume, dataset, table, and vector-index names |
+| `chapter04_conf.yml` | Tool-calling agent configuration (Ch 4) |
+| `chapter05_conf.yml` | Tracing / retriever configuration (Ch 5) |
+| `chapter09_conf.yml` | Monitoring experiment path (Ch 9) |
+| `synthetic_eval.yml` | Synthetic evaluation dataset generation settings |
+| `uc_model_registry.yml` | Unity Catalog model and prompt registry names |
 
-## 6.3 Evaluating the Retriever
-- Why Evaluate Retrieval?
-- Validation Dataset for Retrieval Evaluation
-- Retriever Metrics 
-
-## 6.4 Evaluating the LLM chain
-- LLM as a Judge 
-- LLM Chains 
-- Interpreting Evaluation Results
-- RAG Metrics (RAG != Chain)
-- Standard Metrics for LLMs
-- Custom Scoring Metrics
-
-## 6.5 Conclusion & Best Practices
+The defaults use catalog `workspace` and schema `unity_airways`. Edit `conf/data.yml` if you want to use a different Unity Catalog location.
 
 ---
 
-# Chapter 7: Advanced ChatModels, Agents, and Custom PyFuncs
+## Datasets
 
-## 7.1 Developing Custom ChatModels with MLflow
-- Why and when to use ChatModels? 
-- Wrapping Local LLM Providers
-- Advanced Features: Tracing, Dependencies and Configuration Management
+Sample Unity Airways data lives in [`dataset/`](dataset) as Parquet files:
 
-## 7.2 Implementing Tool-Calling Models and Agents
-- Building Agents with Integrated Tools
-- Case Study: Extending the HR Chatbot with External Data Lookups
-- Tools example: SQL Functions, API Calls, Vector Retrieval…  
-- Advanced Features: Tracing, Evaluations  
-
-## 7.3 Packaging and Deploying Advanced LLMs as Custom PyFuncs
-- Deploying to Model Serving
-- Managing Dependencies and Model Versioning
-
-## 7.4 Conclusion & Best Practices
+- `unity_airways_faq.snappy.parquet` — FAQ documents (unstructured policy content)
+- `unity_airways_booking_records.snappy.parquet` — structured booking records
+- `unity_airways_sample_qa.snappy.parquet` — sample question/answer pairs for evaluation
 
 ---
 
-# Chapter 8: Operationalizing LLMs with MLflow
+## Using the code examples
 
-## 8.1 MLflow roles in LLMOps 
-- Architecture Flow of MLflow in LLM
-- MLflow components in LLMOps  
+This code is here to help you get your job done. In general, you may use it in your own programs and documentation without asking permission. See the book's *Using Code Examples* section for details. An attribution is appreciated but not required; for example:
 
-## 8.2 Overview of the MLflow AI Gateway
-- MLflow AI Gateway vs. MosaicAI AI Gateway
-- When and Why to Choose One Over the Other
+> *Practical MLflow for Generative AI on Databricks* by Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim (O'Reilly). Copyright 2026 Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim.
 
-## 8.3 MLFlow Model Registry for Model Ops
-- Version control
-- Stage / Alias
-
-## 8.4 Monitoring with MLFlow Metrics
-- Tracing Statistics 
-- Model Evaluation Metrics 
-
-## 8.5 Conclusion & Best Practices
+If you have a technical question or a problem using the code examples, please email support@oreilly.com.
 
 ---
 
-# Chapter 9: Conclusion and Future Directions
+## License
 
-## 9.1 Recap of the HR Policy Chatbot Journey
-- Key Learnings and Outcomes
-
-## 9.2 Emerging Trends in LLMs and MLflow
-- Future Opportunities and Evolving Use Cases
-
-## 9.3 Contributing and Engaging with the Open-Source Community
-- Overview of the Public GitHub Repository
-- Next Steps and Final Thoughts
-
----
-
-# Appendices
-
-- **Appendix A:** GitHub Repository Structure and How to Use It
-- **Appendix B:** Glossary of Key Terms
-- **Appendix C:** Additional Resources and References
+Released under the [MIT License](LICENSE).
