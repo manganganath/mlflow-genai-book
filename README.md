@@ -11,10 +11,10 @@ by [Nuwan Ganganath](https://www.linkedin.com/in/manganganath), [Julie Nguyen](h
 
 This repository contains the notebooks, agent code, configuration files, and datasets that accompany the book. It is designed to be worked through as a guided project: run the notebooks in sequence, then adapt the patterns to your own use case.
 
-**Get the book:**
+Get the book:
 
-- 📖 **[Read on O'Reilly](https://learning.oreilly.com/library/view/practical-mlflow-for/9798341652743/)** — the official publisher page
-- 📦 **[Order the paperback on Amazon](https://www.amazon.com/dp/B0GQDJH8PT)**
+- 📖 [Read on O'Reilly](https://learning.oreilly.com/library/view/practical-mlflow-for/9798341652743/)
+- 📦 [Order the paperback on Amazon](https://www.amazon.com/dp/B0GQDJH8PT)
 
 <br clear="left">
 
@@ -106,10 +106,6 @@ Sample Unity Airways data lives in [`dataset/`](dataset) as Parquet files:
 This code is here to help you get your job done. In general, you may use it in your own programs and documentation without asking permission. See the book's *Using Code Examples* section for details. An attribution is appreciated but not required; for example:
 
 > *Practical MLflow for Generative AI on Databricks* by Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim (O'Reilly). Copyright 2026 Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim.
-
-If you have a technical question or a problem using the code examples, please email support@oreilly.com.
-
-The book is available on [O'Reilly](https://learning.oreilly.com/library/view/practical-mlflow-for/9798341652743/) and in paperback on [Amazon](https://www.amazon.com/dp/B0GQDJH8PT).
 
 ---
 
