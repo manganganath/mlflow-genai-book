@@ -103,7 +103,7 @@ Sample Unity Airways data lives in [`dataset/`](dataset) as Parquet files:
 
 ## Using the code examples
 
-This code is here to help you get your job done. In general, you may use it in your own programs and documentation without asking permission. See the book's *Using Code Examples* section for details. An attribution is appreciated but not required; for example:
+This code is here to help you get your job done. In general, you may use it in your own programs and documentation without asking permission. See the book's [Using Code Examples](https://learning.oreilly.com/library/view/practical-mlflow-for/9798341652743/preface01.html#preface_vm_using_code_examples_1782841709602019) section for details. An attribution is appreciated but not required; for example:
 
 > *Practical MLflow for Generative AI on Databricks* by Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim (O'Reilly). Copyright 2026 Nuwan Ganganath, Julie Nguyen, and Chang Shi Lim.
 
