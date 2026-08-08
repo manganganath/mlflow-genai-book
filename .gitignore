@@ -1,1 +1,12 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Book figures are not stored in the repo
 *.png

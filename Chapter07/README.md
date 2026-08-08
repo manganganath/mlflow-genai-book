@@ -1,27 +1,22 @@
-# 📘 Chapter 7: Advanced ChatModels, Agents, and Custom PyFuncs
+# Chapter 7: Advanced Agents and Tools
 
-Advanced LLM applications often require custom models and interactive agents. 
-In this chapter, we build advanced ChatModels, implement tool-calling agents, and learn how to deploy models with custom Python functions.
+This chapter deep dives into agents for the Unity Airways assistant: designing and
+integrating different tools, packaging with `ResponsesAgent`, managing conversation
+context, and adding advanced capabilities while keeping agents measurable and governed.
 
-## 📑 Table of Contents
+## In this chapter
+- Developing Agents with MLflow
+- Creating Tools (Vector Retriever, Structured Data Lookup, API-Calling)
+- Packaging and Deploying with ResponsesAgent
+- Integrating Advanced Capabilities (Context Engineering, MCP Servers as Tools, Multiagents)
 
-### 7.1 Developing Custom ChatModels with MLflow
-- Why and when to use ChatModels? 
-- Wrapping Local LLM Providers
-- Advanced Features: Tracing, Dependencies and Configuration Management
+## In this folder
+- `chapter07_walkthrough.ipynb` — builds the advanced agent, adds retriever,
+  structured-data, and API-calling tools, and explores context engineering, MCP, and
+  multiagent patterns.
+- `agent.py` — the `ResponsesAgent` definition logged as a "model from code".
 
-### 7.2 Implementing Tool-Calling Models and Agents
-- Building Agents with Integrated Tools
-- Case Study: Extending the HR Chatbot with External Data Lookups
-- Tools example: SQL Functions, API Calls, Vector Retrieval…  
-- Advanced Features: Tracing, Evaluations  
-
-### 7.3 Packaging and Deploying Advanced LLMs as Custom PyFuncs
-- Deploying to Model Serving
-- Managing Dependencies and Model Versioning
-
-### 7.4 Conclusion & Best Practices
-
----
-
-By the end of this chapter, you'll be able to create, extend, and deploy custom ChatModels and agents with MLflow.
+## Before you start
+See the [repository README](../README.md) for prerequisites and setup. Run the
+[`Appendix/data_ingestion`](../Appendix/data_ingestion) notebooks first to build the
+Unity Airways FAQ vector search index used from Chapter 4 onward.

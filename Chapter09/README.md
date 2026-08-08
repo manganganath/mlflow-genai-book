@@ -1,20 +1,20 @@
-# 📘 Chapter 9: Conclusion and Future Directions
+# Chapter 9: Production Monitoring with MLflow
 
-This chapter wraps up our journey with MLflow and LLMs, summarizing key lessons and highlighting future opportunities. 
-We also provide guidance on contributing to the open-source community and exploring new trends in LLM development.
+This chapter covers monitoring what matters once the Unity Airways assistant is live:
+collecting traces and feedback, running online scorers, tracking cost and performance
+signals, and turning real production behavior into the next evaluation dataset.
 
-## 📑 Table of Contents
+## In this chapter
+- Types of Metrics to Monitor
+- Online Monitoring Workflow
+- Advanced Monitoring on Production Traces
+- Expanding the Evaluation Dataset
 
-### 9.1 Recap of the HR Policy Chatbot Journey
-- Key Learnings and Outcomes
+## In this folder
+- `chapter09_walkthrough.ipynb` — sets up online monitoring, runs scorers on
+  production traces, and expands the evaluation dataset from live behavior.
 
-### 9.2 Emerging Trends in LLMs and MLflow
-- Future Opportunities and Evolving Use Cases
-
-### 9.3 Contributing and Engaging with the Open-Source Community
-- Overview of the Public GitHub Repository
-- Next Steps and Final Thoughts
-
----
-
-By the end of this chapter, you'll have a clear understanding of the HR Chatbot's development and insights into the evolving world of LLMs.
+## Before you start
+See the [repository README](../README.md) for prerequisites and setup. Run the
+[`Appendix/data_ingestion`](../Appendix/data_ingestion) notebooks first to build the
+Unity Airways FAQ vector search index used from Chapter 4 onward.

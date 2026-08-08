@@ -1,28 +1,22 @@
-# 📘 Chapter 8: Operationalizing LLMs with MLflow
+# Chapter 8: Deploying a GenAI Application with MLflow
 
-Deploying and maintaining LLMs in production requires careful monitoring and lifecycle management. 
-In this chapter, we explore the operational aspects of MLflow for LLM applications.
+This chapter covers deployment strategies that fit enterprise realities: serving the
+Unity Airways agent on Databricks Model Serving, using the MLflow AI Gateway and AI
+guardrails, and applying LLM and agent operations for repeatable releases.
 
-## 📑 Table of Contents
+## In this chapter
+- Deploying to Databricks Model Serving
+- MLflow AI Gateway
+- AI Guardrails
+- LLM Operations and Agent Operations
+- Challenges of Productionization
 
-### 8.1 MLflow roles in LLMOps 
-- Architecture Flow of MLflow in LLM
-- MLflow components in LLMOps  
+## In this folder
+- `chapter08_walkthrough.ipynb` — deploys the agent to Model Serving and demonstrates
+  the AI Gateway, guardrails, and operational patterns.
+- `agent.py` — the deployable agent definition logged as a "model from code".
 
-### 8.2 Overview of the MLflow AI Gateway
-- MLflow AI Gateway vs. MosaicAI AI Gateway
-- When and Why to Choose One Over the Other
-
-### 8.3 MLFlow Model Registry for Model Ops
-- Version control
-- Stage / Alias
-
-### 8.4 Monitoring with MLFlow Metrics
-- Tracing Statistics 
-- Model Evaluation Metrics 
-
-### 8.5 Conclusion & Best Practices
-
----
-
-By the end of this chapter, you'll be equipped with the knowledge to operationalize LLM applications effectively using MLflow.
+## Before you start
+See the [repository README](../README.md) for prerequisites and setup. Run the
+[`Appendix/data_ingestion`](../Appendix/data_ingestion) notebooks first to build the
+Unity Airways FAQ vector search index used from Chapter 4 onward.

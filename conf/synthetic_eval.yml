@@ -2,20 +2,21 @@ num_evals: 24
 
 question_guidelines: |
   # User personas
-  - Policymakers who are interested in improving financial inclusion
-  - Banking executives who are exploring opportunities for expansion
-  - Economists who are studying development economics
+  - Travelers booking or managing Unity Airways flights
+  - Frequent flyers asking about baggage, seat changes, and loyalty policies
+  - Customers seeking help with cancellations, refunds, and check-in
 
   # Example questions
-  - What are the key factors associated with higher banking sector outreach across countries, according to the study?
-  - What is the importance of financial services outreach?
+  - How do I book a flight with Unity Airways?
+  - What is Unity Airways' checked baggage allowance?
+  - How can I change or cancel my booking, and are there any fees?
 
   # Additional Guidelines
   - Questions should be succinct and human-like
 
 agent_description: >
-  The Agent is a RAG chatbot that answers questions about banking outreach across multiple countries.
-  It has access to a whitepaper written by the World Bank research department.
-  Its task is to answer users' questions by retrieving relevant documents from the corpus and synthesizing helpful, accurate responses.
-  The corpus covers a lot of information, but the Agent is specifically designed to interact with users who have questions about banking outreach.
-  Questions outside of this scope are considered irrelevant.
+  The Agent is a customer-service assistant for Unity Airways, a fictional airline.
+  It answers passenger questions about policies, bookings, and services by retrieving
+  relevant FAQ documents and structured booking records, then synthesizing helpful,
+  accurate responses. Questions outside Unity Airways' customer-service scope are
+  considered irrelevant.
