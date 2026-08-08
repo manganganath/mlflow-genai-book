@@ -53,9 +53,6 @@ Every chapter builds on a single scenario — a customer-service assistant for a
 ## Prerequisites
 
 - Access to a **Databricks workspace**. If you don't have one, sign up for the free edition: <https://www.databricks.com/learn/free-edition>
-- **Serverless compute** attached to a notebook.
-- A **pay-per-token Foundation Model** served on the Databricks Foundation Model APIs (the examples use `databricks-gpt-oss-120b`).
-- A **Databricks Vector Search endpoint** (the config defaults to an endpoint named `vs_endpoint`).
 - Familiarity with Python and Databricks notebooks. You do not need to be an MLflow expert.
 
 ---
