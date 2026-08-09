@@ -18,7 +18,6 @@ This repository contains the notebooks, agent code, configuration files, and dat
 
 <br clear="left">
 
-
 ---
 
 ## The running example: Unity Airways
