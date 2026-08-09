@@ -3,7 +3,7 @@
 **Build High-Quality AI Agents from Prompt Design to Production**
 
 <a href="https://learning.oreilly.com/library/view/practical-mlflow-for/9798341652743/">
-  <img src="https://m.media-amazon.com/images/I/81EyxamuaIL._SL1500_.jpg" alt="Cover of Practical MLflow for Generative AI on Databricks" align="left" width="240" hspace="20" vspace="6">
+  <img src="https://m.media-amazon.com/images/I/81EyxamuaIL._SL1500_.jpg" alt="Cover of Practical MLflow for Generative AI on Databricks" align="left" width="260" hspace="20" vspace="6">
 </a>
 
 Companion code for the O'Reilly book *Practical MLflow for Generative AI on Databricks*
