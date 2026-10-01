@@ -14,7 +14,7 @@ This repository contains the notebooks, agent code, configuration files, and dat
 **Get the book:**
 
 - 📖 [Read on O'Reilly](https://learning.oreilly.com/library/view/practical-mlflow-for/9798341652743/)
-- 📦 [Order the paperback on Amazon](https://www.amazon.com/dp/B0GQDJH8PT)
+- 📦 [Order the paperback on Amazon](https://www.amazon.sg/dp/B0GQDJH8PT)
 
 <br clear="left">
 
